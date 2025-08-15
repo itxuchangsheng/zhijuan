@@ -1,0 +1,36 @@
+{
+  "77f6a640-a1d2-4764-b70f-5fd99439ea23": {
+    "status": "SUCCESS",
+    "stage": "completed",
+    "message": "分析完成",
+    "progress": 100,
+    "timestamp": 1755228019.2855954,
+    "created_at": "2025-08-15T03:20:19.285596",
+    "user_id": "user_1755228018408_5rjyhamfe",
+    "image_filename": "1755228019207_d9cd0ac1f64da4e1.png",
+    "image_url": null,
+    "image_identifier": "1755228019207_d9cd0ac1f64da4e1.png",
+    "use_local_file": true,
+    "problem_text": "",
+    "user_answer": "",
+    "completed_at": "2025-08-15T03:25:03.170795",
+    "validation_result": {
+      "is_valid": true,
+      "has_ai_analysis": false,
+      "has_scene_data": false,
+      "has_physics_data": true,
+      "missing_components": [
+        "场景对象数据",
+        "问题信息结构"
+      ],
+      "validation_details": {
+        "physics_components": [
+          "trajectory",
+          "energy",
+          "symbolic_solutions"
+        ],
+        "ai_model": "gemini-2.5-pro"
+      }
+    }
+  }
+}

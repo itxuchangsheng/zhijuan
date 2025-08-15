@@ -1,0 +1,133 @@
+{
+  "77f6a640-a1d2-4764-b70f-5fd99439ea23": {
+    "task_id": "77f6a640-a1d2-4764-b70f-5fd99439ea23",
+    "status": "completed",
+    "created_at": "2025-08-15T03:25:02.524792",
+    "processed_at": "2025-08-15T03:25:02.524810",
+    "problem_info": {},
+    "scene_objects": [],
+    "relationships": [],
+    "sub_questions": [],
+    "visual_assets": {
+      "original_image": "1755228019207_d9cd0ac1f64da4e1.png",
+      "style_metadata": {
+        "drawing_style": "technical",
+        "color_palette": [
+          "#000000",
+          "#0066CC"
+        ],
+        "line_style": {
+          "type": "solid",
+          "thickness": "medium",
+          "color": "#000000"
+        }
+      },
+      "original_objects": []
+    },
+    "physics_data": {
+      "trajectory": {},
+      "energy": {
+        "kinetic": [],
+        "potential": [],
+        "total": [],
+        "times": []
+      },
+      "symbolic_solutions": {
+        "problem_type": "compound_mechanics",
+        "symbolic_solutions": {
+          "general": "根据具体物理模型分析"
+        },
+        "key_equations": [
+          "根据问题类型选择合适的物理定律"
+        ]
+      },
+      "model_info": {
+        "primary_model": "compound_mechanics",
+        "secondary_models": [
+          "dynamics",
+          "kinematics",
+          "energy"
+        ],
+        "confidence": 0.98,
+        "reasoning": "该问题涉及三个相互作用的物体（滑块A、滑块B、木板），它们之间以及木板与地面之间都存在摩擦力。问题要求分析不同阶段（初始、B与板共速、最终状态）的运动情况，包括各自的加速度和位移。这是一个典型的多体、多阶段动力学问题。首先需要对每个物体进行受力分析，应用牛顿第二定律（动力学核心）求解各自的加速度。然后，利用运动学公式计算速度、时间和位移。整个过程涉及多个物体和多个阶段的耦合运动，因此属于复合力学模型。",
+        "scene_complexity": "complex",
+        "estimated_objects": 3,
+        "key_features": [
+          "三体系统 (滑块A, 滑块B, 木板)",
+          "多重摩擦界面 (A-木板, B-木板, 木板-地面)",
+          "多阶段运动过程",
+          "相对运动与绝对运动分析",
+          "牛顿第二定律应用"
+        ],
+        "analysis_strategy": "dynamics_expert"
+      }
+    },
+    "user_inputs": {
+      "image_url": "1755228019207_d9cd0ac1f64da4e1.png",
+      "problem_text": "",
+      "user_answer": "",
+      "user_id": "user_1755228018408_5rjyhamfe"
+    },
+    "metadata": {
+      "processing_version": "2.1-enhanced",
+      "ai_model": "gemini-2.5-pro",
+      "processing_time": 1755228302.5248244,
+      "data_quality": "high"
+    },
+    "physics_lab_url": "/physicslab/77f6a640-a1d2-4764-b70f-5fd99439ea23",
+    "full_simulation_url": "https://zhijuanwang.com/physicslab/77f6a640-a1d2-4764-b70f-5fd99439ea23",
+    "simulation_config": {
+      "model_type": "kinematics",
+      "title": "物理模拟实验",
+      "description": "基于AI分析生成的物理模拟实验",
+      "parameters": {
+        "gravity": 9.8,
+        "mass": 1.0,
+        "time_step": 0.01,
+        "max_time": 10.0
+      },
+      "initial_conditions": {
+        "position_x": 0,
+        "position_y": 10.0,
+        "velocity_x": 0,
+        "velocity_y": 0,
+        "acceleration_x": 0,
+        "acceleration_y": -9.8
+      },
+      "visualization": {
+        "show_trajectory": true,
+        "show_velocity_vector": true,
+        "show_acceleration_vector": true
+      },
+      "controls": {
+        "parameter_sliders": [
+          {
+            "name": "height",
+            "label": "初始高度",
+            "min": 1,
+            "max": 50,
+            "value": 10,
+            "unit": "m"
+          },
+          {
+            "name": "mass",
+            "label": "质量",
+            "min": 0.1,
+            "max": 10,
+            "value": 1,
+            "unit": "kg"
+          },
+          {
+            "name": "gravity",
+            "label": "重力加速度",
+            "min": 1,
+            "max": 20,
+            "value": 9.8,
+            "unit": "m/s²"
+          }
+        ]
+      }
+    },
+    "saved_at": "2025-08-15T03:25:02.783122"
+  }
+}

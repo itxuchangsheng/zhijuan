@@ -1,0 +1,214 @@
+--- NewAPI Gemini 2.5 Pro 调试信息 ---
+--- 时间戳: 2025-08-15T03:25:02.004622 ---
+--- 模型: gemini-2.5-pro ---
+--- Max Tokens: 32768 ---
+--- Token使用: {'prompt_tokens': 2691, 'completion_tokens': 2760, 'total_tokens': 5451, 'prompt_tokens_details': {'cached_tokens': 0, 'text_tokens': 369, 'audio_tokens': 0, 'image_tokens': 0}, 'completion_tokens_details': {'text_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 1919}, 'input_tokens': 0, 'output_tokens': 0, 'input_tokens_details': None} ---
+--- Token分配: 总计=2760, 推理=1919, 输出=841 ---
+--- 响应状态: 成功 ---
+==================================================
+
+=== 提示 ===
+
+
+请对图片进行视觉风格分析，提取物理对象和风格特征。
+
+⚠️ 重要：必须返回严格的JSON格式，不要包含任何其他文本、解释或markdown标记。
+
+返回格式示例：
+{
+    "visual_style": {
+        "color_palette": ["#FF5733", "#33FF57", "#3357FF"],
+        "line_style": {
+            "thickness": "2px",
+            "type": "solid",
+            "color": "#000000"
+        },
+        "drawing_style": "technical"
+    },
+    "physical_semantics": {
+        "objects": [
+            {
+                "id": "object_1",
+                "type": "block",
+                "bounding_box": [100, 200, 150, 250],
+                "properties": {
+                    "material": "solid",
+                    "mass_relative": "medium"
+                }
+            }
+        ],
+        "relationships": [
+            {
+                "type": "contact",
+                "objects": ["object_1", "object_2"]
+            }
+        ],
+        "physics_concepts": [
+            "friction",
+            "gravity",
+            "motion"
+        ]
+    }
+}
+
+要求：
+1. 只返回JSON，不要任何其他文本
+2. 确保所有字符串都用双引号
+3. 数组和对象格式正确
+4. 识别所有可见的物理对象
+5. 提取主要颜色（3-5种）
+6. 识别物理概念和关系
+
+
+=== AI响应 ===
+```json
+{
+    "visual_style": {
+        "color_palette": [
+            "#000000",
+            "#FFFFFF",
+            "#E6B99A"
+        ],
+        "line_style": {
+            "thickness": "thin",
+            "type": "solid",
+            "color": "#000000"
+        },
+        "drawing_style": "schematic"
+    },
+    "physical_semantics": {
+        "objects": [
+            {
+                "id": "block_A",
+                "type": "block",
+                "bounding_box": [
+                    715,
+                    685,
+                    775,
+                    735
+                ],
+                "properties": {
+                    "label": "A",
+                    "material": "solid"
+                }
+            },
+            {
+                "id": "block_B",
+                "type": "block",
+                "bounding_box": [
+                    180,
+                    685,
+                    240,
+                    735
+                ],
+                "properties": {
+                    "label": "B",
+                    "material": "solid"
+                }
+            },
+            {
+                "id": "plank",
+                "type": "plank",
+                "bounding_box": [
+                    160,
+                    735,
+                    795,
+                    760
+                ],
+                "properties": {
+                    "material": "solid"
+                }
+            },
+            {
+                "id": "ground",
+                "type": "surface",
+                "bounding_box": [
+                    160,
+                    760,
+                    795,
+                    780
+                ],
+                "properties": {
+                    "state": "stationary",
+                    "texture": "hatched"
+                }
+            },
+            {
+                "id": "velocity_vector_A",
+                "type": "arrow",
+                "bounding_box": [
+                    630,
+                    700,
+                    700,
+                    715
+                ],
+                "properties": {
+                    "represents": "velocity",
+                    "direction": "left"
+                }
+            },
+            {
+                "id": "velocity_vector_B",
+                "type": "arrow",
+                "bounding_box": [
+                    250,
+                    700,
+                    320,
+                    715
+                ],
+                "properties": {
+                    "represents": "velocity",
+                    "direction": "right"
+                }
+            }
+        ],
+        "relationships": [
+            {
+                "type": "contact",
+                "objects": [
+                    "block_A",
+                    "plank"
+                ]
+            },
+            {
+                "type": "contact",
+                "objects": [
+                    "block_B",
+                    "plank"
+                ]
+            },
+            {
+                "type": "contact",
+                "objects": [
+                    "plank",
+                    "ground"
+                ]
+            },
+            {
+                "type": "relative_motion",
+                "objects": [
+                    "block_A",
+                    "block_B"
+                ],
+                "direction": "approaching"
+            }
+        ],
+        "physics_concepts": [
+            "dynamics",
+            "kinematics",
+            "friction",
+            "gravity",
+            "normal_force",
+            "mass",
+            "acceleration",
+            "velocity",
+            "multi-body_system"
+        ]
+    }
+}
+```
+
+=== 响应分析 ===
+响应长度: 3665 字符
+是否为空: 否
+推理比例: 69.5%

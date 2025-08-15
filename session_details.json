@@ -1,0 +1,80 @@
+{
+  "session_id": "77f6a640-a1d2-4764-b70f-5fd99439ea23_1755228019",
+  "task_id": "77f6a640-a1d2-4764-b70f-5fd99439ea23",
+  "start_time": "2025-08-15T03:20:19.284559",
+  "stages": [
+    {
+      "stage": "input",
+      "timestamp": "2025-08-15T03:20:19.284860",
+      "data": {
+        "image_path": "1755228019207_d9cd0ac1f64da4e1.png",
+        "image_exists": false,
+        "image_size_bytes": 0,
+        "image_hash": null,
+        "head_status": null,
+        "head_content_type": null,
+        "head_host": null,
+        "head_path": null,
+        "problem_text": "",
+        "problem_text_length": 0
+      }
+    },
+    {
+      "stage": "ai_request",
+      "timestamp": "2025-08-15T03:22:54.143166",
+      "data": {
+        "provider": "newapi",
+        "prompt_length": 2000,
+        "prompt_hash": "678fafc9cecb6045cd74be83e242529e",
+        "model_config": {
+          "model": "gemini-2.5-pro",
+          "base_url": "https://www.chataiapi.com"
+        },
+        "prompt_preview": "{\"model\": \"gemini-2.5-pro\", \"messages\": [{\"role\": \"user\", \"content\": [{\"type\": \"text\", \"text\": \"\\n\\u8bf7\\u5bf9\\u56fe\\u7247\\u8fdb\\u884c\\u89c6\\u89c9\\u98ce\\u683c\\u5206\\u6790\\uff0c\\u63d0\\u53d6\\u7269\\u7406..."
+      }
+    },
+    {
+      "stage": "ai_response",
+      "timestamp": "2025-08-15T03:25:02.003981",
+      "data": {
+        "provider": "newapi",
+        "response_length": 3665,
+        "response_hash": "f38f86e656ba6005606f65d38202d846",
+        "processing_time_seconds": 127.85952854156494,
+        "raw_output_file": "/tmp/ai_debug/raw_ai_output_77f6a640-a1d2-4764-b70f-5fd99439ea23_1755228019.txt",
+        "response_preview": "```json\n{\n    \"visual_style\": {\n        \"color_palette\": [\n            \"#000000\",\n            \"#FFFFFF\",\n            \"#E6B99A\"\n        ],\n        \"line_style\": {\n            \"thickness\": \"thin\",\n            \"type\": \"solid\",\n            \"color\": \"#000000\"\n        },\n        \"drawing_style\": \"schematic\"\n    },\n    \"physical_semantics\": {\n        \"objects\": [\n            {\n                \"id\": \"block_A\",\n                \"type\": \"block\",\n                \"bounding_box\": [\n                    715,\n  ..."
+      }
+    },
+    {
+      "stage": "final_output",
+      "timestamp": "2025-08-15T03:25:03.171710",
+      "data": {
+        "success": true,
+        "output_keys": [
+          "task_id",
+          "status",
+          "created_at",
+          "processed_at",
+          "problem_info",
+          "scene_objects",
+          "relationships",
+          "sub_questions",
+          "visual_assets",
+          "physics_data",
+          "user_inputs",
+          "metadata",
+          "physics_lab_url",
+          "full_simulation_url",
+          "simulation_config",
+          "saved_at"
+        ],
+        "output_size": 2557,
+        "has_scene_data": false,
+        "has_analysis_data": false
+      }
+    }
+  ],
+  "errors": [],
+  "metadata": {},
+  "end_time": "2025-08-15T03:25:03.171896"
+}
